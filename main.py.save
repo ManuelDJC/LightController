@@ -1,0 +1,42 @@
+from gpiozero import LED
+from time import sleep
+from pygame import mixer
+
+pins = ["GPIO04", "GPIO17", "GPIO27", "GPIO22", "GPIO10", 
+"GPIO09", "GPIO11", "GPIO08"]
+
+def main():
+   
+   led = [None] * 8
+   for x in range(0,8):
+      led[x] = LED(pins[x])
+      led[x].on()
+      sleep(1)
+   
+   sleep(2)
+   
+   for x in range(0,8):
+      led[x].off()
+      sleep(1)
+   
+   
+   
+   print("Finished init")
+   f = open("text.txt", "r")
+   lines = f.readlines()
+   mixer.init()
+   
+   i = 1
+   for i < len(lines):
+      
+      res = [int(i) for i in test_string.split() if i.isdigit()]
+      
+      
+   print(lines[0])
+   mixer.music.load("/home/pi/files/beeth.ogg")
+   mixer.music.play()
+   
+   sleep(30)
+   
+if __name__ == "__main__":
+    main()
