@@ -35,7 +35,7 @@ def one():
     while counter > 0:
         diff = diffC
         for x in range(0,4):
-            if(x != 0):
+            if x != 0:
                 led[x-1].off()
                 led[x+3].off()
             led[x].on()
