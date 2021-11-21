@@ -12,7 +12,7 @@ pins = ["GPIO04", "GPIO17", "GPIO27", "GPIO22", "GPIO10",
 pinValues = [False for i in range(8)]
 led = [None] * 8
 
-counterC = 120.0
+counterC = 60.0
 diffC = .5
 
 
